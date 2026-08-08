@@ -14,7 +14,7 @@
 
 <p align="center">
   Submission for <strong>ML Bubble 2026</strong> · Army Institute of Technology (AIT), Pune<br>
-  Track <strong>TE-BE (Design &amp; Solve — Advanced)</strong> · Author <strong>Manoj Kharkar</strong> (<a href="https://github.com/manojk909">@manojk909</a>) · Solo submission
+  Track <strong>TE-BE (Design &amp; Solve — Advanced)</strong> · Author 
 </p>
 
 ---
@@ -350,7 +350,6 @@ sentinel-nids/
 │   ├── METHODOLOGY.md              every design decision + why
 │   ├── MODEL_CARD.md               intended use, limits, what it must NOT be used for
 │   ├── DEPLOYMENT.md               serving, drift, retraining, failure modes
-│   └── ROUND2_QA.md                anticipated viva questions
 ├── models/                         fitted estimators + sentinel_best.onnx
 └── reports/
     ├── figures/                    12 figures (PNG 300 dpi + SVG)
@@ -394,7 +393,6 @@ Honest limitations, stated here rather than buried:
 | [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md) | Every design decision and why — split protocol, encoding, metric choice, threats to validity |
 | [`docs/MODEL_CARD.md`](docs/MODEL_CARD.md) | Intended use, measured performance, and an explicit **do-not-use-for** list |
 | [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) | Serving architecture, threshold policy, drift monitoring, failure modes |
-| [`docs/ROUND2_QA.md`](docs/ROUND2_QA.md) | Prepared answers for the Round 2 model-explanation viva |
 | [`data/README.md`](data/README.md) | Dataset provenance, licence, schema, SHA-256 manifest, limitations |
 | [`reports/metrics/`](reports/metrics) | Every number in this README, as JSON |
 
@@ -432,15 +430,3 @@ The dataset is **not** redistributed in this repository; [`src/data.py`](src/dat
 records SHA-256 hashes. Full provenance and limitations: [`data/README.md`](data/README.md).
 
 **Built with** scikit-learn, XGBoost, LightGBM, SHAP, ONNX Runtime, matplotlib, FastAPI.
-
-### Citing this work
-
-```bibtex
-@misc{kharkar2026sentinelnids,
-  author = {Kharkar, Manoj},
-  title  = {SENTINEL-NIDS: Honest Evaluation of Machine-Learning Network Intrusion Detection},
-  year   = {2026},
-  note   = {ML Bubble 2026, Army Institute of Technology, Pune},
-  howpublished = {\url{https://github.com/manojk909/SENTINEL-NIDS}}
-}
-```
