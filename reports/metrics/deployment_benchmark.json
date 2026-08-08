@@ -1,0 +1,198 @@
+{
+  "n_features": 122,
+  "note": "Measured on the build container CPU. Absolute numbers are hardware-dependent; the RATIOS between models are the transferable result.",
+  "platform": {
+    "machine": "x86_64",
+    "processor": "x86_64",
+    "python": "3.11.15",
+    "cpu_count": 2
+  },
+  "models": {
+    "01_logistic_regression": {
+      "disk_size_kb": 11.3,
+      "load_seconds": 0.7789,
+      "single_flow_latency": {
+        "p50_ms": 0.215,
+        "p95_ms": 0.3071,
+        "p99_ms": 0.3979,
+        "mean_ms": 0.2268
+      },
+      "batch_throughput": {
+        "batch_1": {
+          "seconds_per_batch": 0.000244,
+          "flows_per_second": 4101
+        },
+        "batch_32": {
+          "seconds_per_batch": 0.000301,
+          "flows_per_second": 106251
+        },
+        "batch_256": {
+          "seconds_per_batch": 0.000483,
+          "flows_per_second": 530039
+        },
+        "batch_4096": {
+          "seconds_per_batch": 0.006399,
+          "flows_per_second": 640085
+        }
+      }
+    },
+    "02_decision_tree": {
+      "disk_size_kb": 51.8,
+      "load_seconds": 0.0222,
+      "single_flow_latency": {
+        "p50_ms": 0.0794,
+        "p95_ms": 0.1457,
+        "p99_ms": 0.1833,
+        "mean_ms": 0.0927
+      },
+      "batch_throughput": {
+        "batch_1": {
+          "seconds_per_batch": 9e-05,
+          "flows_per_second": 11141
+        },
+        "batch_32": {
+          "seconds_per_batch": 0.000112,
+          "flows_per_second": 286069
+        },
+        "batch_256": {
+          "seconds_per_batch": 0.000145,
+          "flows_per_second": 1764665
+        },
+        "batch_4096": {
+          "seconds_per_batch": 0.000807,
+          "flows_per_second": 5072935
+        }
+      }
+    },
+    "03_random_forest": {
+      "disk_size_kb": 39333.7,
+      "load_seconds": 0.333,
+      "single_flow_latency": {
+        "p50_ms": 65.2055,
+        "p95_ms": 76.985,
+        "p99_ms": 85.4935,
+        "mean_ms": 65.7178
+      },
+      "batch_throughput": {
+        "batch_1": {
+          "seconds_per_batch": 0.063942,
+          "flows_per_second": 15
+        },
+        "batch_32": {
+          "seconds_per_batch": 0.073949,
+          "flows_per_second": 432
+        },
+        "batch_256": {
+          "seconds_per_batch": 0.096788,
+          "flows_per_second": 2644
+        },
+        "batch_4096": {
+          "seconds_per_batch": 0.130329,
+          "flows_per_second": 31428
+        }
+      }
+    },
+    "05_xgboost": {
+      "disk_size_kb": 3366.6,
+      "load_seconds": 0.0746,
+      "single_flow_latency": {
+        "p50_ms": 0.9683,
+        "p95_ms": 1.1247,
+        "p99_ms": 1.442,
+        "mean_ms": 0.9856
+      },
+      "batch_throughput": {
+        "batch_1": {
+          "seconds_per_batch": 0.000924,
+          "flows_per_second": 1082
+        },
+        "batch_32": {
+          "seconds_per_batch": 0.001885,
+          "flows_per_second": 16979
+        },
+        "batch_256": {
+          "seconds_per_batch": 0.005231,
+          "flows_per_second": 48938
+        },
+        "batch_4096": {
+          "seconds_per_batch": 0.059801,
+          "flows_per_second": 68494
+        }
+      }
+    },
+    "06_lightgbm": {
+      "disk_size_kb": 3319.6,
+      "load_seconds": 0.0762,
+      "single_flow_latency": {
+        "p50_ms": 1.0455,
+        "p95_ms": 1.2831,
+        "p99_ms": 2.9032,
+        "mean_ms": 1.1136
+      },
+      "batch_throughput": {
+        "batch_1": {
+          "seconds_per_batch": 0.001106,
+          "flows_per_second": 904
+        },
+        "batch_32": {
+          "seconds_per_batch": 0.001749,
+          "flows_per_second": 18294
+        },
+        "batch_256": {
+          "seconds_per_batch": 0.005708,
+          "flows_per_second": 44850
+        },
+        "batch_4096": {
+          "seconds_per_batch": 0.078468,
+          "flows_per_second": 52199
+        }
+      }
+    },
+    "07_mlp": {
+      "disk_size_kb": 774.9,
+      "load_seconds": 0.0074,
+      "single_flow_latency": {
+        "p50_ms": 0.3624,
+        "p95_ms": 0.4144,
+        "p99_ms": 0.4743,
+        "mean_ms": 0.3691
+      },
+      "batch_throughput": {
+        "batch_1": {
+          "seconds_per_batch": 0.000365,
+          "flows_per_second": 2737
+        },
+        "batch_32": {
+          "seconds_per_batch": 0.000525,
+          "flows_per_second": 60923
+        },
+        "batch_256": {
+          "seconds_per_batch": 0.001115,
+          "flows_per_second": 229693
+        },
+        "batch_4096": {
+          "seconds_per_batch": 0.009244,
+          "flows_per_second": 443088
+        }
+      }
+    }
+  },
+  "onnx_runtime": {
+    "source_model": "01_logistic_regression",
+    "file": "models/sentinel_best.onnx",
+    "disk_size_kb": 4.9,
+    "intra_op_threads": 1,
+    "single_flow_latency": {
+      "p50_ms": 0.0129,
+      "p95_ms": 0.0201,
+      "p99_ms": 0.0449,
+      "mean_ms": 0.0141
+    },
+    "batch_4096_flows_per_second": 809931
+  },
+  "capacity_context": {
+    "best_batch_throughput_flows_per_second": 809931,
+    "assumption": "Flow-level (not packet-level) classification. NSL-KDD features are aggregates over a completed flow, so the detector runs once per flow, not once per packet.",
+    "implication": "Single-threaded batch throughput above ~10^5 flows/s covers a 1 Gbps link under a conservative 1 KB mean flow size; a single commodity core is therefore sufficient at campus/edge scale. The binding cost in practice is FEATURE EXTRACTION from the packet stream, not model inference \u2014 a point most ML-IDS papers omit."
+  }
+}
