@@ -1,0 +1,251 @@
+{
+  "feature_count": 122,
+  "model": "RandomForestClassifier(n_estimators=200)",
+  "protocol_A_pooled_random_split": {
+    "accuracy": 0.9951,
+    "balanced_accuracy": 0.9373,
+    "macro_f1": 0.9548,
+    "weighted_f1": 0.995,
+    "per_class_recall": {
+      "Normal": 0.9966,
+      "DoS": 0.9993,
+      "Probe": 0.9961,
+      "R2L": 0.9147,
+      "U2R": 0.78
+    },
+    "per_class_support": {
+      "Normal": 15411,
+      "DoS": 10677,
+      "Probe": 2816,
+      "R2L": 750,
+      "U2R": 50
+    },
+    "confusion_matrix": [
+      [
+        15358,
+        10,
+        15,
+        27,
+        1
+      ],
+      [
+        6,
+        10670,
+        1,
+        0,
+        0
+      ],
+      [
+        11,
+        0,
+        2805,
+        0,
+        0
+      ],
+      [
+        62,
+        0,
+        0,
+        686,
+        2
+      ],
+      [
+        9,
+        0,
+        0,
+        2,
+        39
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "Normal",
+      "DoS",
+      "Probe",
+      "R2L",
+      "U2R"
+    ],
+    "train_seconds": 13.7,
+    "n_train": 118813,
+    "n_test": 29704
+  },
+  "protocol_B_official_split": {
+    "accuracy": 0.7528,
+    "balanced_accuracy": 0.4835,
+    "macro_f1": 0.4869,
+    "weighted_f1": 0.7092,
+    "per_class_recall": {
+      "Normal": 0.9738,
+      "DoS": 0.7975,
+      "Probe": 0.6026,
+      "R2L": 0.0385,
+      "U2R": 0.005
+    },
+    "per_class_support": {
+      "Normal": 9711,
+      "DoS": 7458,
+      "Probe": 2421,
+      "R2L": 2754,
+      "U2R": 200
+    },
+    "confusion_matrix": [
+      [
+        9457,
+        67,
+        186,
+        0,
+        1
+      ],
+      [
+        1387,
+        5948,
+        123,
+        0,
+        0
+      ],
+      [
+        799,
+        163,
+        1459,
+        0,
+        0
+      ],
+      [
+        2645,
+        0,
+        2,
+        106,
+        1
+      ],
+      [
+        196,
+        0,
+        0,
+        3,
+        1
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "Normal",
+      "DoS",
+      "Probe",
+      "R2L",
+      "U2R"
+    ],
+    "train_seconds": 12.57,
+    "n_train": 125973,
+    "n_test": 22544
+  },
+  "gap": {
+    "accuracy_points": 24.23,
+    "macro_f1_points": 46.79,
+    "relative_error_increase_x": 50.4
+  },
+  "failure_analysis": {
+    "seen_attacks": {
+      "n": 9083,
+      "family_accuracy": 0.7504,
+      "missed_as_normal_rate": 0.2368
+    },
+    "novel_attacks": {
+      "n": 3750,
+      "family_accuracy": 0.1861,
+      "missed_as_normal_rate": 0.7669
+    },
+    "per_novel_attack_type": {
+      "apache2": {
+        "n": 737,
+        "detected_as_attack_rate": 0.4668,
+        "correct_family_rate": 0.4668
+      },
+      "httptunnel": {
+        "n": 133,
+        "detected_as_attack_rate": 0.0,
+        "correct_family_rate": 0.0
+      },
+      "mailbomb": {
+        "n": 293,
+        "detected_as_attack_rate": 0.0,
+        "correct_family_rate": 0.0
+      },
+      "mscan": {
+        "n": 996,
+        "detected_as_attack_rate": 0.2028,
+        "correct_family_rate": 0.0392
+      },
+      "named": {
+        "n": 17,
+        "detected_as_attack_rate": 0.1176,
+        "correct_family_rate": 0.0
+      },
+      "processtable": {
+        "n": 685,
+        "detected_as_attack_rate": 0.0088,
+        "correct_family_rate": 0.0
+      },
+      "ps": {
+        "n": 15,
+        "detected_as_attack_rate": 0.1333,
+        "correct_family_rate": 0.0
+      },
+      "saint": {
+        "n": 319,
+        "detected_as_attack_rate": 0.9843,
+        "correct_family_rate": 0.9843
+      },
+      "sendmail": {
+        "n": 14,
+        "detected_as_attack_rate": 0.0,
+        "correct_family_rate": 0.0
+      },
+      "snmpgetattack": {
+        "n": 178,
+        "detected_as_attack_rate": 0.0,
+        "correct_family_rate": 0.0
+      },
+      "snmpguess": {
+        "n": 331,
+        "detected_as_attack_rate": 0.0,
+        "correct_family_rate": 0.0
+      },
+      "sqlattack": {
+        "n": 2,
+        "detected_as_attack_rate": 0.0,
+        "correct_family_rate": 0.0
+      },
+      "udpstorm": {
+        "n": 2,
+        "detected_as_attack_rate": 1.0,
+        "correct_family_rate": 0.0
+      },
+      "worm": {
+        "n": 2,
+        "detected_as_attack_rate": 0.0,
+        "correct_family_rate": 0.0
+      },
+      "xlock": {
+        "n": 9,
+        "detected_as_attack_rate": 0.0,
+        "correct_family_rate": 0.0
+      },
+      "xsnoop": {
+        "n": 4,
+        "detected_as_attack_rate": 0.25,
+        "correct_family_rate": 0.0
+      },
+      "xterm": {
+        "n": 13,
+        "detected_as_attack_rate": 0.0769,
+        "correct_family_rate": 0.0769
+      }
+    }
+  },
+  "binary_detection_official_split": {
+    "true_negative": 9457,
+    "false_positive": 254,
+    "false_negative": 5027,
+    "true_positive": 7806,
+    "detection_rate_recall": 0.6083,
+    "false_alarm_rate": 0.0262,
+    "precision": 0.9685
+  }
+}
