@@ -14,7 +14,7 @@
 
 <p align="center">
   Submission for <strong>ML Bubble 2026</strong> · Army Institute of Technology (AIT), Pune<br>
-  Track <strong>TE-BE (Design &amp; Solve — Advanced)</strong> · Author 
+  Track <strong>TE-BE (Design &amp; Solve — Advanced)</strong> 
 </p>
 
 ---
