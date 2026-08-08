@@ -1,0 +1,46 @@
+{
+  "train_rows": 125973,
+  "test_rows": 22544,
+  "n_features_raw": 41,
+  "exact_duplicate_rows_train": 0,
+  "attack_types_train": 23,
+  "attack_types_test": 38,
+  "attack_types_test_only": [
+    "apache2",
+    "httptunnel",
+    "mailbomb",
+    "mscan",
+    "named",
+    "processtable",
+    "ps",
+    "saint",
+    "sendmail",
+    "snmpgetattack",
+    "snmpguess",
+    "sqlattack",
+    "udpstorm",
+    "worm",
+    "xlock",
+    "xsnoop",
+    "xterm"
+  ],
+  "n_attack_types_test_only": 17,
+  "novel_rows_in_test": 3750,
+  "novel_share_of_test": 0.1663,
+  "family_counts_train": {
+    "Normal": 67343,
+    "DoS": 45927,
+    "Probe": 11656,
+    "R2L": 995,
+    "U2R": 52
+  },
+  "family_counts_test": {
+    "Normal": 9711,
+    "DoS": 7458,
+    "R2L": 2754,
+    "Probe": 2421,
+    "U2R": 200
+  },
+  "attack_rate_train": 0.4654,
+  "attack_rate_test": 0.5692
+}
