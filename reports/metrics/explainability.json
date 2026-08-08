@@ -1,0 +1,333 @@
+{
+  "model": "03_random_forest",
+  "n_features": 122,
+  "permutation_importance_top18": [
+    {
+      "feature": "src_bytes",
+      "group": "Basic (header//bytes)",
+      "macro_f1_drop_when_shuffled": 0.04237,
+      "std": 0.00358
+    },
+    {
+      "feature": "dst_host_srv_diff_host_rate",
+      "group": "Host-based traffic (100-conn window)",
+      "macro_f1_drop_when_shuffled": 0.0211,
+      "std": 0.00027
+    },
+    {
+      "feature": "dst_host_same_src_port_rate",
+      "group": "Host-based traffic (100-conn window)",
+      "macro_f1_drop_when_shuffled": 0.02001,
+      "std": 0.00095
+    },
+    {
+      "feature": "service__ftp_data",
+      "group": "Basic (header//bytes)",
+      "macro_f1_drop_when_shuffled": 0.01836,
+      "std": 0.0001
+    },
+    {
+      "feature": "dst_bytes",
+      "group": "Basic (header//bytes)",
+      "macro_f1_drop_when_shuffled": 0.01524,
+      "std": 0.0026
+    },
+    {
+      "feature": "duration",
+      "group": "Basic (header//bytes)",
+      "macro_f1_drop_when_shuffled": 0.01462,
+      "std": 0.00077
+    },
+    {
+      "feature": "dst_host_count",
+      "group": "Host-based traffic (100-conn window)",
+      "macro_f1_drop_when_shuffled": 0.01418,
+      "std": 0.00077
+    },
+    {
+      "feature": "dst_host_srv_count",
+      "group": "Host-based traffic (100-conn window)",
+      "macro_f1_drop_when_shuffled": 0.01308,
+      "std": 0.00044
+    },
+    {
+      "feature": "service__http",
+      "group": "Basic (header//bytes)",
+      "macro_f1_drop_when_shuffled": 0.0108,
+      "std": 0.00109
+    },
+    {
+      "feature": "srv_count",
+      "group": "Time-based traffic (2-sec window)",
+      "macro_f1_drop_when_shuffled": 0.00976,
+      "std": 0.00123
+    },
+    {
+      "feature": "flag__SF",
+      "group": "Basic (header//bytes)",
+      "macro_f1_drop_when_shuffled": 0.00938,
+      "std": 0.00139
+    },
+    {
+      "feature": "dst_host_same_srv_rate",
+      "group": "Host-based traffic (100-conn window)",
+      "macro_f1_drop_when_shuffled": 0.00788,
+      "std": 0.00092
+    },
+    {
+      "feature": "flag__RSTR",
+      "group": "Basic (header//bytes)",
+      "macro_f1_drop_when_shuffled": 0.00747,
+      "std": 0.0002
+    },
+    {
+      "feature": "count",
+      "group": "Time-based traffic (2-sec window)",
+      "macro_f1_drop_when_shuffled": 0.00531,
+      "std": 0.00163
+    },
+    {
+      "feature": "rerror_rate",
+      "group": "Time-based traffic (2-sec window)",
+      "macro_f1_drop_when_shuffled": 0.00444,
+      "std": 0.00053
+    },
+    {
+      "feature": "dst_host_rerror_rate",
+      "group": "Host-based traffic (100-conn window)",
+      "macro_f1_drop_when_shuffled": 0.00399,
+      "std": 0.00065
+    },
+    {
+      "feature": "diff_srv_rate",
+      "group": "Time-based traffic (2-sec window)",
+      "macro_f1_drop_when_shuffled": 0.00353,
+      "std": 0.00252
+    },
+    {
+      "feature": "dst_host_srv_rerror_rate",
+      "group": "Host-based traffic (100-conn window)",
+      "macro_f1_drop_when_shuffled": 0.00339,
+      "std": 0.00077
+    }
+  ],
+  "shap_top8_per_family": {
+    "Normal": [
+      {
+        "feature": "src_bytes",
+        "group": "Basic (header//bytes)",
+        "mean_abs_shap": 0.06948
+      },
+      {
+        "feature": "dst_bytes",
+        "group": "Basic (header//bytes)",
+        "mean_abs_shap": 0.04268
+      },
+      {
+        "feature": "flag__SF",
+        "group": "Basic (header//bytes)",
+        "mean_abs_shap": 0.02963
+      },
+      {
+        "feature": "dst_host_srv_count",
+        "group": "Host-based traffic (100-conn window)",
+        "mean_abs_shap": 0.02882
+      },
+      {
+        "feature": "same_srv_rate",
+        "group": "Time-based traffic (2-sec window)",
+        "mean_abs_shap": 0.0243
+      },
+      {
+        "feature": "logged_in",
+        "group": "Content (payload-derived)",
+        "mean_abs_shap": 0.02288
+      },
+      {
+        "feature": "dst_host_same_srv_rate",
+        "group": "Host-based traffic (100-conn window)",
+        "mean_abs_shap": 0.02093
+      },
+      {
+        "feature": "count",
+        "group": "Time-based traffic (2-sec window)",
+        "mean_abs_shap": 0.02091
+      }
+    ],
+    "DoS": [
+      {
+        "feature": "src_bytes",
+        "group": "Basic (header//bytes)",
+        "mean_abs_shap": 0.05654
+      },
+      {
+        "feature": "flag__SF",
+        "group": "Basic (header//bytes)",
+        "mean_abs_shap": 0.05213
+      },
+      {
+        "feature": "dst_bytes",
+        "group": "Basic (header//bytes)",
+        "mean_abs_shap": 0.04087
+      },
+      {
+        "feature": "same_srv_rate",
+        "group": "Time-based traffic (2-sec window)",
+        "mean_abs_shap": 0.03876
+      },
+      {
+        "feature": "dst_host_serror_rate",
+        "group": "Host-based traffic (100-conn window)",
+        "mean_abs_shap": 0.03513
+      },
+      {
+        "feature": "count",
+        "group": "Time-based traffic (2-sec window)",
+        "mean_abs_shap": 0.03493
+      },
+      {
+        "feature": "flag__S0",
+        "group": "Basic (header//bytes)",
+        "mean_abs_shap": 0.0319
+      },
+      {
+        "feature": "diff_srv_rate",
+        "group": "Time-based traffic (2-sec window)",
+        "mean_abs_shap": 0.03156
+      }
+    ],
+    "Probe": [
+      {
+        "feature": "src_bytes",
+        "group": "Basic (header//bytes)",
+        "mean_abs_shap": 0.09543
+      },
+      {
+        "feature": "dst_host_diff_srv_rate",
+        "group": "Host-based traffic (100-conn window)",
+        "mean_abs_shap": 0.05981
+      },
+      {
+        "feature": "diff_srv_rate",
+        "group": "Time-based traffic (2-sec window)",
+        "mean_abs_shap": 0.04684
+      },
+      {
+        "feature": "dst_host_rerror_rate",
+        "group": "Host-based traffic (100-conn window)",
+        "mean_abs_shap": 0.04581
+      },
+      {
+        "feature": "dst_host_serror_rate",
+        "group": "Host-based traffic (100-conn window)",
+        "mean_abs_shap": 0.03849
+      },
+      {
+        "feature": "dst_host_srv_count",
+        "group": "Host-based traffic (100-conn window)",
+        "mean_abs_shap": 0.03345
+      },
+      {
+        "feature": "dst_host_same_src_port_rate",
+        "group": "Host-based traffic (100-conn window)",
+        "mean_abs_shap": 0.03257
+      },
+      {
+        "feature": "rerror_rate",
+        "group": "Time-based traffic (2-sec window)",
+        "mean_abs_shap": 0.03183
+      }
+    ],
+    "R2L": [
+      {
+        "feature": "dst_host_same_src_port_rate",
+        "group": "Host-based traffic (100-conn window)",
+        "mean_abs_shap": 0.01496
+      },
+      {
+        "feature": "is_guest_login",
+        "group": "Content (payload-derived)",
+        "mean_abs_shap": 0.01233
+      },
+      {
+        "feature": "logged_in",
+        "group": "Content (payload-derived)",
+        "mean_abs_shap": 0.0113
+      },
+      {
+        "feature": "service__ftp_data",
+        "group": "Basic (header//bytes)",
+        "mean_abs_shap": 0.01072
+      },
+      {
+        "feature": "dst_host_srv_count",
+        "group": "Host-based traffic (100-conn window)",
+        "mean_abs_shap": 0.00885
+      },
+      {
+        "feature": "dst_bytes",
+        "group": "Basic (header//bytes)",
+        "mean_abs_shap": 0.00833
+      },
+      {
+        "feature": "dst_host_srv_diff_host_rate",
+        "group": "Host-based traffic (100-conn window)",
+        "mean_abs_shap": 0.00831
+      },
+      {
+        "feature": "src_bytes",
+        "group": "Basic (header//bytes)",
+        "mean_abs_shap": 0.00726
+      }
+    ],
+    "U2R": [
+      {
+        "feature": "src_bytes",
+        "group": "Basic (header//bytes)",
+        "mean_abs_shap": 0.00543
+      },
+      {
+        "feature": "dst_bytes",
+        "group": "Basic (header//bytes)",
+        "mean_abs_shap": 0.00488
+      },
+      {
+        "feature": "dst_host_srv_count",
+        "group": "Host-based traffic (100-conn window)",
+        "mean_abs_shap": 0.00452
+      },
+      {
+        "feature": "root_shell",
+        "group": "Content (payload-derived)",
+        "mean_abs_shap": 0.00443
+      },
+      {
+        "feature": "hot",
+        "group": "Content (payload-derived)",
+        "mean_abs_shap": 0.00438
+      },
+      {
+        "feature": "num_file_creations",
+        "group": "Content (payload-derived)",
+        "mean_abs_shap": 0.00384
+      },
+      {
+        "feature": "duration",
+        "group": "Basic (header//bytes)",
+        "mean_abs_shap": 0.00338
+      },
+      {
+        "feature": "service__telnet",
+        "group": "Basic (header//bytes)",
+        "mean_abs_shap": 0.00318
+      }
+    ]
+  },
+  "shap_sample_size": 1000,
+  "importance_by_feature_group_pct": {
+    "Basic (header//bytes)": 51.72,
+    "Host-based traffic (100-conn window)": 35.39,
+    "Time-based traffic (2-sec window)": 11.66,
+    "Content (payload-derived)": 1.23
+  }
+}
