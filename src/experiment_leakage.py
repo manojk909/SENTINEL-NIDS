@@ -23,8 +23,8 @@ from sklearn.metrics import (accuracy_score, balanced_accuracy_score,
                              recall_score)
 from sklearn.model_selection import train_test_split
 
-from config import FAMILIES, METRICS, SEED
-from data import build_feature_matrix, load_raw
+from config import DATA_RAW, FAMILIES, METRICS, SEED
+from data import build_feature_matrix, download, load_raw
 
 
 def rf():
@@ -57,6 +57,11 @@ def score(y_true, y_pred, labels) -> dict:
 
 
 def main() -> dict:
+    # Self-heal: fetch the raw data if it is absent, so this script works standalone on a
+    # fresh clone rather than crashing on a missing file.
+    if not (DATA_RAW / "KDDTrain+.txt").exists():
+        print("[leakage] raw data absent -> downloading first")
+        download()
     train_df, test_df = load_raw("train"), load_raw("test")
     (Xtr_full, Xte_full), feat_names, _ = build_feature_matrix(train_df, test_df)
 

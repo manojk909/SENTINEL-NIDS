@@ -23,8 +23,13 @@ SRC = ROOT / "src"
 METRICS = ROOT / "reports" / "metrics"
 
 # (name, script, sentinel output that means "already done")
+#
+# NOTE on the data stage sentinel: it must be a RAW file, not dataset_summary.json.
+# The summary is committed to git, so on a fresh clone it already exists — using it as the
+# sentinel made run_all.py skip the download and every downstream stage then failed on a
+# missing KDDTrain+.txt. Keying on the raw file is what makes a clean clone actually work.
 STAGES = [
-    ("data",     "data.py",                ROOT / "data" / "processed" / "dataset_summary.json"),
+    ("data",     "data.py",                ROOT / "data" / "raw" / "KDDTrain+.txt"),
     ("leakage",  "experiment_leakage.py",  METRICS / "leakage_experiment.json"),
     ("models",   "experiment_models.py",   METRICS / "model_comparison.json"),
     ("zeroday",  "experiment_zeroday.py",  METRICS / "zeroday_experiment.json"),
