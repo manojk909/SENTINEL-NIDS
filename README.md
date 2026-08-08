@@ -285,11 +285,20 @@ questioning. Details in **[docs/METHODOLOGY.md](docs/METHODOLOGY.md)**.
 ## Reproduce everything
 
 ```bash
-git clone <this-repo> && cd sentinel-nids
+git clone https://github.com/manojk909/SENTINEL-NIDS.git && cd SENTINEL-NIDS
 pip install -r requirements.txt
 
 python run_all.py            # full pipeline, ~12 min on 2 vCPU
 ```
+
+> **This was verified, not assumed.** The repository was cloned into an empty directory, the
+> committed `leakage_experiment.json` deleted, and `python run_all.py --only leakage` run from
+> scratch. It downloaded the dataset, retrained, and produced **bit-identical** numbers in 46
+> seconds — same accuracy, macro-F1, balanced accuracy, gap and per-class recall.
+>
+> That test found a real bug first: the data stage was keyed on a file that ships in the repo, so
+> a fresh clone skipped the download and every later stage crashed while the pipeline still
+> printed "all stages complete". Fixed in [`7b60890`](../../commit/7b60890).
 
 Or stage by stage:
 
