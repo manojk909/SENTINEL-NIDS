@@ -1,0 +1,83 @@
+{
+  "accuracy": 0.7366,
+  "balanced_accuracy": 0.4681,
+  "macro_f1": 0.4684,
+  "weighted_f1": 0.6891,
+  "per_class_recall": {
+    "Normal": 0.9738,
+    "DoS": 0.7643,
+    "Probe": 0.5923,
+    "R2L": 0.0051,
+    "U2R": 0.005
+  },
+  "per_class_f1": {
+    "Normal": 0.7675,
+    "DoS": 0.8514,
+    "Probe": 0.7029,
+    "R2L": 0.0101,
+    "U2R": 0.0099
+  },
+  "confusion_matrix": [
+    [
+      9457,
+      67,
+      186,
+      0,
+      1
+    ],
+    [
+      1723,
+      5700,
+      35,
+      0,
+      0
+    ],
+    [
+      823,
+      164,
+      1434,
+      0,
+      0
+    ],
+    [
+      2737,
+      0,
+      2,
+      14,
+      1
+    ],
+    [
+      193,
+      0,
+      2,
+      4,
+      1
+    ]
+  ],
+  "binary_detection": {
+    "detection_rate": 0.5733,
+    "false_alarm_rate": 0.0262,
+    "precision": 0.9666,
+    "f1": 0.7197,
+    "missed_attacks": 5476,
+    "false_alarms": 254
+  },
+  "fit_seconds": 17.01,
+  "predict_seconds_22544_flows": 0.3435,
+  "predict_ms_per_flow": 0.01523,
+  "cv_macro_f1_mean_on_train": 0.9036,
+  "cv_macro_f1_std_on_train": 0.0329,
+  "cv_seconds": 34.5,
+  "shift_penalty_macro_f1": 0.4352,
+  "novel_attacks": {
+    "n": 3750,
+    "detected_as_attack_rate": 0.1352,
+    "missed_as_normal_rate": 0.8648,
+    "correct_family_rate": 0.0891
+  },
+  "seen_attacks": {
+    "n": 9083,
+    "detected_as_attack_rate": 0.7542,
+    "correct_family_rate": 0.7503
+  }
+}
