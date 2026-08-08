@@ -1,0 +1,14 @@
+# SENTINEL-NIDS — pinned to the exact versions this submission was built and verified with.
+# Verified 08 Aug 2026 on Python 3.13 / Linux x86_64.
+numpy==2.4.4
+pandas==3.0.2
+scikit-learn==1.8.0
+xgboost==3.2.0
+lightgbm==4.7.0
+shap==0.51.0
+matplotlib==3.10.9
+seaborn==0.13.2
+joblib==1.5.3
+skl2onnx==1.20.0
+onnx==1.22.0
+onnxruntime==1.25.0

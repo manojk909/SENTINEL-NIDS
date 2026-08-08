@@ -1,0 +1,32 @@
+# ── Raw dataset (~28 MB) ──────────────────────────────────────────────
+# Fetch with `python src/data.py`; verify against data/raw/manifest.json (SHA-256).
+data/raw/*.txt
+data/processed/*.npz
+data/processed/*.parquet
+
+# ── Large regenerable model artefacts ─────────────────────────────────
+# These are outputs, not sources: `python run_all.py` rebuilds them bit-identically
+# (fixed seed). Excluded because they total ~92 MB and add nothing a reviewer needs.
+#   03_random_forest.joblib           39 MB
+#   04_random_forest_balanced.joblib  46 MB
+#   05_xgboost.joblib / 06_lightgbm   3.3 MB each
+# The artefacts actually SERVED by app/service.py are committed:
+#   sentinel_best.onnx (4.9 KB), hybrid_supervised_logreg.joblib (9 KB),
+#   hybrid_novelty_isoforest.joblib, preprocessor_meta.joblib
+models/03_random_forest.joblib
+models/04_random_forest_balanced.joblib
+models/05_xgboost.joblib
+models/06_lightgbm.joblib
+
+# ── Build / render intermediates ──────────────────────────────────────
+submission/slide-*.jpg
+submission/*.pdf.tmp
+reports/*.log
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+~$*
