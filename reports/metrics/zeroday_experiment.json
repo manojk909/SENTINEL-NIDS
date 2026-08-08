@@ -1,0 +1,310 @@
+{
+  "n_features": 122,
+  "lofo": {
+    "DoS": {
+      "train_rows_removed": 45927,
+      "test_rows_of_family": 7458,
+      "detection_rate_family_HELD_OUT": 0.5417,
+      "detection_rate_family_INCLUDED": 0.788,
+      "detection_loss": 0.2463,
+      "false_alarm_rate_on_normal": 0.0217,
+      "fit_seconds": 8.4
+    },
+    "Probe": {
+      "train_rows_removed": 11656,
+      "test_rows_of_family": 2421,
+      "detection_rate_family_HELD_OUT": 0.3689,
+      "detection_rate_family_INCLUDED": 0.7485,
+      "detection_loss": 0.3796,
+      "false_alarm_rate_on_normal": 0.0086,
+      "fit_seconds": 11.4
+    },
+    "R2L": {
+      "train_rows_removed": 995,
+      "test_rows_of_family": 2754,
+      "detection_rate_family_HELD_OUT": 0.0007,
+      "detection_rate_family_INCLUDED": 0.0534,
+      "detection_loss": 0.0527,
+      "false_alarm_rate_on_normal": 0.027,
+      "fit_seconds": 13.6
+    },
+    "U2R": {
+      "train_rows_removed": 52,
+      "test_rows_of_family": 200,
+      "detection_rate_family_HELD_OUT": 0.02,
+      "detection_rate_family_INCLUDED": 0.11,
+      "detection_loss": 0.09,
+      "false_alarm_rate_on_normal": 0.0265,
+      "fit_seconds": 13.8
+    }
+  },
+  "hybrid": {
+    "supervised_model": "StandardScaler + LogisticRegression(max_iter=1000)",
+    "novelty_model": "StandardScaler + IsolationForest(n_estimators=300, contamination=0.02) fitted on NORMAL traffic only",
+    "n_normal_train_rows_for_novelty": 67343,
+    "channel_A_only_no_abstention": {
+      "overall_detection_rate": 0.6564,
+      "seen_attack_detection_rate": 0.7561,
+      "novel_attack_detection_rate": 0.4147,
+      "false_alarm_rate": 0.0702,
+      "novel_missed": 2195,
+      "false_alarms": 682
+    },
+    "channel_B_only_isolationforest": {
+      "overall_detection_rate": 0.6171,
+      "seen_attack_detection_rate": 0.6383,
+      "novel_attack_detection_rate": 0.5656,
+      "false_alarm_rate": 0.0199,
+      "novel_missed": 1629,
+      "false_alarms": 193
+    },
+    "channel_A_or_B_no_abstention": {
+      "overall_detection_rate": 0.7271,
+      "seen_attack_detection_rate": 0.7698,
+      "novel_attack_detection_rate": 0.6237,
+      "false_alarm_rate": 0.0756,
+      "novel_missed": 1411,
+      "false_alarms": 734
+    },
+    "operating_curve": [
+      {
+        "tau": 0.0,
+        "abstained_flows": 0,
+        "A_with_abstention": {
+          "overall_detection_rate": 0.6564,
+          "seen_attack_detection_rate": 0.7561,
+          "novel_attack_detection_rate": 0.4147,
+          "false_alarm_rate": 0.0702,
+          "novel_missed": 2195,
+          "false_alarms": 682
+        },
+        "A_with_abstention_OR_B": {
+          "overall_detection_rate": 0.7271,
+          "seen_attack_detection_rate": 0.7698,
+          "novel_attack_detection_rate": 0.6237,
+          "false_alarm_rate": 0.0756,
+          "novel_missed": 1411,
+          "false_alarms": 734
+        }
+      },
+      {
+        "tau": 0.5,
+        "abstained_flows": 16,
+        "A_with_abstention": {
+          "overall_detection_rate": 0.6571,
+          "seen_attack_detection_rate": 0.7569,
+          "novel_attack_detection_rate": 0.4152,
+          "false_alarm_rate": 0.071,
+          "novel_missed": 2193,
+          "false_alarms": 689
+        },
+        "A_with_abstention_OR_B": {
+          "overall_detection_rate": 0.7275,
+          "seen_attack_detection_rate": 0.7702,
+          "novel_attack_detection_rate": 0.624,
+          "false_alarm_rate": 0.0763,
+          "novel_missed": 1410,
+          "false_alarms": 741
+        }
+      },
+      {
+        "tau": 0.6,
+        "abstained_flows": 218,
+        "A_with_abstention": {
+          "overall_detection_rate": 0.6703,
+          "seen_attack_detection_rate": 0.7689,
+          "novel_attack_detection_rate": 0.4315,
+          "false_alarm_rate": 0.0742,
+          "novel_missed": 2132,
+          "false_alarms": 721
+        },
+        "A_with_abstention_OR_B": {
+          "overall_detection_rate": 0.7355,
+          "seen_attack_detection_rate": 0.7809,
+          "novel_attack_detection_rate": 0.6256,
+          "false_alarm_rate": 0.0795,
+          "novel_missed": 1404,
+          "false_alarms": 772
+        }
+      },
+      {
+        "tau": 0.7,
+        "abstained_flows": 366,
+        "A_with_abstention": {
+          "overall_detection_rate": 0.6805,
+          "seen_attack_detection_rate": 0.7787,
+          "novel_attack_detection_rate": 0.4427,
+          "false_alarm_rate": 0.076,
+          "novel_missed": 2090,
+          "false_alarms": 738
+        },
+        "A_with_abstention_OR_B": {
+          "overall_detection_rate": 0.7425,
+          "seen_attack_detection_rate": 0.7898,
+          "novel_attack_detection_rate": 0.628,
+          "false_alarm_rate": 0.0812,
+          "novel_missed": 1395,
+          "false_alarms": 789
+        }
+      },
+      {
+        "tau": 0.8,
+        "abstained_flows": 510,
+        "A_with_abstention": {
+          "overall_detection_rate": 0.6904,
+          "seen_attack_detection_rate": 0.786,
+          "novel_attack_detection_rate": 0.4589,
+          "false_alarm_rate": 0.0777,
+          "novel_missed": 2029,
+          "false_alarms": 755
+        },
+        "A_with_abstention_OR_B": {
+          "overall_detection_rate": 0.7489,
+          "seen_attack_detection_rate": 0.7964,
+          "novel_attack_detection_rate": 0.6336,
+          "false_alarm_rate": 0.0829,
+          "novel_missed": 1374,
+          "false_alarms": 805
+        }
+      },
+      {
+        "tau": 0.9,
+        "abstained_flows": 712,
+        "A_with_abstention": {
+          "overall_detection_rate": 0.702,
+          "seen_attack_detection_rate": 0.7895,
+          "novel_attack_detection_rate": 0.4901,
+          "false_alarm_rate": 0.0832,
+          "novel_missed": 1912,
+          "false_alarms": 808
+        },
+        "A_with_abstention_OR_B": {
+          "overall_detection_rate": 0.7548,
+          "seen_attack_detection_rate": 0.7992,
+          "novel_attack_detection_rate": 0.6472,
+          "false_alarm_rate": 0.0881,
+          "novel_missed": 1323,
+          "false_alarms": 856
+        }
+      },
+      {
+        "tau": 0.95,
+        "abstained_flows": 924,
+        "A_with_abstention": {
+          "overall_detection_rate": 0.715,
+          "seen_attack_detection_rate": 0.795,
+          "novel_attack_detection_rate": 0.5213,
+          "false_alarm_rate": 0.0878,
+          "novel_missed": 1795,
+          "false_alarms": 853
+        },
+        "A_with_abstention_OR_B": {
+          "overall_detection_rate": 0.7619,
+          "seen_attack_detection_rate": 0.8045,
+          "novel_attack_detection_rate": 0.6587,
+          "false_alarm_rate": 0.0925,
+          "novel_missed": 1280,
+          "false_alarms": 898
+        }
+      },
+      {
+        "tau": 0.98,
+        "abstained_flows": 1279,
+        "A_with_abstention": {
+          "overall_detection_rate": 0.7361,
+          "seen_attack_detection_rate": 0.8099,
+          "novel_attack_detection_rate": 0.5573,
+          "false_alarm_rate": 0.0966,
+          "novel_missed": 1660,
+          "false_alarms": 938
+        },
+        "A_with_abstention_OR_B": {
+          "overall_detection_rate": 0.7785,
+          "seen_attack_detection_rate": 0.8181,
+          "novel_attack_detection_rate": 0.6827,
+          "false_alarm_rate": 0.101,
+          "novel_missed": 1190,
+          "false_alarms": 981
+        }
+      },
+      {
+        "tau": 0.99,
+        "abstained_flows": 1777,
+        "A_with_abstention": {
+          "overall_detection_rate": 0.7665,
+          "seen_attack_detection_rate": 0.8423,
+          "novel_attack_detection_rate": 0.5829,
+          "false_alarm_rate": 0.1076,
+          "novel_missed": 1564,
+          "false_alarms": 1045
+        },
+        "A_with_abstention_OR_B": {
+          "overall_detection_rate": 0.8034,
+          "seen_attack_detection_rate": 0.8454,
+          "novel_attack_detection_rate": 0.7016,
+          "false_alarm_rate": 0.1119,
+          "novel_missed": 1119,
+          "false_alarms": 1087
+        }
+      },
+      {
+        "tau": 0.995,
+        "abstained_flows": 2363,
+        "A_with_abstention": {
+          "overall_detection_rate": 0.7979,
+          "seen_attack_detection_rate": 0.8568,
+          "novel_attack_detection_rate": 0.6555,
+          "false_alarm_rate": 0.1265,
+          "novel_missed": 1292,
+          "false_alarms": 1228
+        },
+        "A_with_abstention_OR_B": {
+          "overall_detection_rate": 0.8317,
+          "seen_attack_detection_rate": 0.8586,
+          "novel_attack_detection_rate": 0.7664,
+          "false_alarm_rate": 0.1307,
+          "novel_missed": 876,
+          "false_alarms": 1269
+        }
+      },
+      {
+        "tau": 0.999,
+        "abstained_flows": 5973,
+        "A_with_abstention": {
+          "overall_detection_rate": 0.9177,
+          "seen_attack_detection_rate": 0.9759,
+          "novel_attack_detection_rate": 0.7768,
+          "false_alarm_rate": 0.3399,
+          "novel_missed": 837,
+          "false_alarms": 3301
+        },
+        "A_with_abstention_OR_B": {
+          "overall_detection_rate": 0.9427,
+          "seen_attack_detection_rate": 0.9767,
+          "novel_attack_detection_rate": 0.8605,
+          "false_alarm_rate": 0.3433,
+          "novel_missed": 523,
+          "false_alarms": 3334
+        }
+      }
+    ],
+    "recommended_operating_point": {
+      "constraint": "false_alarm_rate <= 0.10",
+      "tau": 0.95,
+      "overall_detection_rate": 0.7619,
+      "seen_attack_detection_rate": 0.8045,
+      "novel_attack_detection_rate": 0.6587,
+      "false_alarm_rate": 0.0925,
+      "novel_missed": 1280,
+      "false_alarms": 898
+    },
+    "improvement_vs_plain_classifier": {
+      "novel_detection_before": 0.4147,
+      "novel_detection_after": 0.6587,
+      "novel_detection_gain_pp": 24.4,
+      "false_alarm_before": 0.0702,
+      "false_alarm_after": 0.0925,
+      "false_alarm_cost_pp": 2.23
+    }
+  }
+}

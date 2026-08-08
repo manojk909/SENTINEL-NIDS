@@ -1,0 +1,38 @@
+{
+  "DoS": {
+    "train_rows_removed": 45927,
+    "test_rows_of_family": 7458,
+    "detection_rate_family_HELD_OUT": 0.5417,
+    "detection_rate_family_INCLUDED": 0.788,
+    "detection_loss": 0.2463,
+    "false_alarm_rate_on_normal": 0.0217,
+    "fit_seconds": 8.4
+  },
+  "Probe": {
+    "train_rows_removed": 11656,
+    "test_rows_of_family": 2421,
+    "detection_rate_family_HELD_OUT": 0.3689,
+    "detection_rate_family_INCLUDED": 0.7485,
+    "detection_loss": 0.3796,
+    "false_alarm_rate_on_normal": 0.0086,
+    "fit_seconds": 11.4
+  },
+  "R2L": {
+    "train_rows_removed": 995,
+    "test_rows_of_family": 2754,
+    "detection_rate_family_HELD_OUT": 0.0007,
+    "detection_rate_family_INCLUDED": 0.0534,
+    "detection_loss": 0.0527,
+    "false_alarm_rate_on_normal": 0.027,
+    "fit_seconds": 13.6
+  },
+  "U2R": {
+    "train_rows_removed": 52,
+    "test_rows_of_family": 200,
+    "detection_rate_family_HELD_OUT": 0.02,
+    "detection_rate_family_INCLUDED": 0.11,
+    "detection_loss": 0.09,
+    "false_alarm_rate_on_normal": 0.0265,
+    "fit_seconds": 13.8
+  }
+}
