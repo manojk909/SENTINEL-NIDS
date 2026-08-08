@@ -10,8 +10,6 @@ deciding whether to trust this system, not to market it.
 | | |
 |---|---|
 | **Name** | SENTINEL-NIDS v1.0 |
-| **Date** | 08 August 2026 |
-| **Author** | Manoj Kharkar (solo) — ML Bubble 2026, TE-BE Advanced track |
 | **Type** | Two-channel network intrusion detector with explicit abstention |
 | **Channel A** | `StandardScaler` → `LogisticRegression(max_iter=1000)`, 5-class |
 | **Channel B** | `StandardScaler` → `IsolationForest(n_estimators=300, contamination=0.02)`, fitted on normal traffic only |

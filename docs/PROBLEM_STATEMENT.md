@@ -1,9 +1,6 @@
 # SENTINEL-NIDS — Problem Statement
 
-**ML Bubble 2026 · Track: TE-BE (Design & Solve — Advanced)**
 **Domain: Defense & National Security × Cybersecurity × Predictive Analytics**
-**Participant: Manoj Kharkar (solo)**
-**Locked: 08 Aug 2026, 11:00 AM IST**
 
 ---
 
